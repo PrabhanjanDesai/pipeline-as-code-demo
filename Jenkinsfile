@@ -39,6 +39,12 @@ pipeline {
                 """
             }
         }
-
+        
+        
+        stage('Priting Test') {
+            steps {
+                echo 'Testing this message through pipeline'
+            }
+        }
     }   
 }
