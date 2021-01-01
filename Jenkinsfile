@@ -49,12 +49,12 @@ pipeline {
         
         stage('File Exists') {
             steps {
-                if (fileExists 'pom.xml') {
+                if (fileExists('pom.xml')) {
                 echo 'Yes'
                 } else {
-               echo 'No'
+                echo 'No'
                 }
-              }
+             }
         }
     }   
 }
