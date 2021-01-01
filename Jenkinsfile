@@ -46,5 +46,16 @@ pipeline {
                 echo 'Testing this message through pipeline'
             }
         }
+        
+        stage('File Exists') {
+            steps {
+                def exists = fileExists 'pom.xml'
+                if (exists) {
+                echo 'Yes'
+                } else {
+               echo 'No'
+                }
+              }
+        }
     }   
 }
