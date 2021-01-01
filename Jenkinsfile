@@ -18,22 +18,9 @@ pipeline {
             )
     }
 
-    environment {
-        APP_NAME = "DCUBE_APP"
-        APP_ENV  = "DEV"
-    }
-
+    
     stages {
         
-        stage('Cleanup Workspace') {
-            steps {
-                cleanWs()
-                sh """
-                echo "Cleaned Up Workspace for ${APP_NAME}"
-                """
-            }
-        }
-
         stage('Code Checkout') {
             steps {
                 checkout([
