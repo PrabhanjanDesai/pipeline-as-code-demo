@@ -8,7 +8,7 @@ pipeline {
     }
 
     tools { 
-        maven 'maven3' 
+        maven 'M2_HOME' 
     }
 
     options {
