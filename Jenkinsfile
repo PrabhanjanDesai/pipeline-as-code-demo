@@ -49,8 +49,7 @@ pipeline {
         
         stage('File Exists') {
             steps {
-                def exists = fileExists 'pom.xml'
-                if (exists) {
+                if (fileExists 'pom.xml') {
                 echo 'Yes'
                 } else {
                echo 'No'
