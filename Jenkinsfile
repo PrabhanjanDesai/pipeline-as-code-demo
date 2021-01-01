@@ -31,13 +31,8 @@ pipeline {
             }
         }
 
-        stage('Code Build') {
-            steps {
-                 sh 'mvn install -Dmaven.test.skip=true'
-            }
-        }
-
-        stage('Priting All Global Variables') {
+        
+       stage('Priting All Global Variables') {
             steps {
                 sh """
                 env
