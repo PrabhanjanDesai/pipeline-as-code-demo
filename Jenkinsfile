@@ -40,21 +40,12 @@ pipeline {
             }
         }
         
-        
-        stage('Priting Test') {
+        stage('Printing Test') {
             steps {
                 echo 'Testing this message through pipeline'
             }
         }
         
-        stage('File Exists') {
-            steps {
-                if (fileExists('pom.xml')) {
-                echo 'Yes'
-                } else {
-                echo 'No'
-                }
-             }
-        }
+        
     }   
 }
